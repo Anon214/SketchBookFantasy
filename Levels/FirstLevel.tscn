@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bb1hw16xo8qen"]
+
+[ext_resource type="Texture2D" uid="uid://6m0xe5jeb2vw" path="res://Tilemaps/bg.png" id="1_aerhw"]
+[ext_resource type="PackedScene" uid="uid://b6g7y4jencox4" path="res://Entities/Player/Player.tscn" id="2_uvoeh"]
+
+[node name="FirstLevel" type="Node2D"]
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(400, 517)
+texture = ExtResource("1_aerhw")
+
+[node name="Player" parent="." instance=ExtResource("2_uvoeh")]
+position = Vector2(438, 457)
