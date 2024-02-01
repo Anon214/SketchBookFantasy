@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6m0xe5jeb2vw"
-path="res://.godot/imported/bg.png-6bd80ad3d5b859c5605e207eba31bb8b.ctex"
+uid="uid://dck8iweeeimv3"
+path="res://.godot/imported/tree 3.png-e176260b32b7c142047aa0715f1ba2a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tilemaps/bg.png"
-dest_files=["res://.godot/imported/bg.png-6bd80ad3d5b859c5605e207eba31bb8b.ctex"]
+source_file="res://Assets/game assets/tree 3.png"
+dest_files=["res://.godot/imported/tree 3.png-e176260b32b7c142047aa0715f1ba2a1.ctex"]
 
 [params]
 
