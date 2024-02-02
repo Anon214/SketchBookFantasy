@@ -1,149 +1,39 @@
-[gd_scene load_steps=6 format=3 uid="uid://bb1hw16xo8qen"]
+[gd_scene load_steps=8 format=3 uid="uid://0njc62m63640"]
 
-[ext_resource type="Texture2D" uid="uid://1hcqipjc0i5r" path="res://Assets/game assets/screen template.png" id="2_q468q"]
-[ext_resource type="PackedScene" uid="uid://b6g7y4jencox4" path="res://Entities/Player/Player.tscn" id="2_uvoeh"]
+[ext_resource type="Texture2D" uid="uid://cat7wymif32y8" path="res://Assets/game assets/first_screen_v2.png" id="1_pvi7s"]
+[ext_resource type="Texture2D" uid="uid://cf4oyg7ka2moy" path="res://Assets/game assets/house2.png" id="3_tab2u"]
 [ext_resource type="Texture2D" uid="uid://b55nav0xvdfpw" path="res://Assets/game assets/house1.png" id="3_we62m"]
+[ext_resource type="Texture2D" uid="uid://cr8rowxfu2uqv" path="res://Assets/game assets/house 3.png" id="4_lrenh"]
+[ext_resource type="Texture2D" uid="uid://ccn3hf7yxpkyn" path="res://Assets/game assets/tire.png" id="5_cxhow"]
+[ext_resource type="Texture2D" uid="uid://dup0uirbrqn8i" path="res://Assets/game assets/swing tree.png" id="6_q1o8e"]
+[ext_resource type="Texture2D" uid="uid://nnjkdb7mfw2u" path="res://Assets/game assets/streetlight.png" id="7_qcjwi"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_54nt7"]
+[node name="Firstscreen" type="Node2D"]
+
+[node name="FirstScreenV2" type="Sprite2D" parent="."]
+position = Vector2(411, 526)
+texture = ExtResource("1_pvi7s")
+
+[node name="House1" type="Sprite2D" parent="."]
+position = Vector2(171, 307)
 texture = ExtResource("3_we62m")
-texture_region_size = Vector2i(25, 25)
-7:0/0 = 0
-8:0/0 = 0
-9:0/0 = 0
-10:0/0 = 0
-7:1/0 = 0
-8:1/0 = 0
-10:1/0 = 0
-11:1/0 = 0
-11:2/0 = 0
-12:2/0 = 0
-7:3/0 = 0
-8:3/0 = 0
-9:3/0 = 0
-10:3/0 = 0
-11:3/0 = 0
-12:3/0 = 0
-7:4/0 = 0
-8:4/0 = 0
-9:4/0 = 0
-10:4/0 = 0
-11:4/0 = 0
-12:4/0 = 0
-12:5/0 = 0
-12:6/0 = 0
-0:7/0 = 0
-4:7/0 = 0
-5:7/0 = 0
-6:7/0 = 0
-7:7/0 = 0
-8:7/0 = 0
-9:7/0 = 0
-10:7/0 = 0
-11:7/0 = 0
-12:7/0 = 0
-0:8/0 = 0
-4:8/0 = 0
-5:8/0 = 0
-7:8/0 = 0
-8:8/0 = 0
-9:8/0 = 0
-10:8/0 = 0
-11:8/0 = 0
-12:8/0 = 0
-0:9/0 = 0
-4:9/0 = 0
-7:9/0 = 0
-8:9/0 = 0
-9:9/0 = 0
-10:9/0 = 0
-11:9/0 = 0
-12:9/0 = 0
-0:10/0 = 0
-3:10/0 = 0
-4:10/0 = 0
-7:10/0 = 0
-8:10/0 = 0
-9:10/0 = 0
-10:10/0 = 0
-11:10/0 = 0
-12:10/0 = 0
-0:11/0 = 0
-3:11/0 = 0
-4:11/0 = 0
-7:11/0 = 0
-8:11/0 = 0
-12:11/0 = 0
-0:12/0 = 0
-3:12/0 = 0
-4:12/0 = 0
-8:12/0 = 0
-12:12/0 = 0
-0:0/0 = 0
-0:1/0 = 0
-0:2/0 = 0
-0:3/0 = 0
-0:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-1:6/0 = 0
-0:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-4:6/0 = 0
-5:6/0 = 0
-6:6/0 = 0
-6:5/0 = 0
-6:4/0 = 0
-6:3/0 = 0
-6:2/0 = 0
-6:1/0 = 0
-6:0/0 = 0
-5:0/0 = 0
-4:0/0 = 0
-3:0/0 = 0
-2:0/0 = 0
-1:0/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-1:1/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-2:2/0 = 0
-1:2/0 = 0
-5:2/0 = 0
-5:3/0 = 0
-4:3/0 = 0
-3:4/0 = 0
-2:4/0 = 0
-1:4/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-2:5/0 = 0
-5:4/0 = 0
-4:5/0 = 0
-3:5/0 = 0
-4:4/0 = 0
-5:5/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_14350"]
-tile_size = Vector2i(25, 25)
-sources/0 = SubResource("TileSetAtlasSource_54nt7")
+[node name="House2" type="Sprite2D" parent="."]
+position = Vector2(689, 297)
+texture = ExtResource("3_tab2u")
 
-[node name="FirstLevel" type="Node2D"]
-position = Vector2(5, 5)
+[node name="House3" type="Sprite2D" parent="."]
+position = Vector2(191, 766)
+texture = ExtResource("4_lrenh")
 
-[node name="Player" parent="." instance=ExtResource("2_uvoeh")]
-position = Vector2(-257, 457)
+[node name="Tire" type="Sprite2D" parent="."]
+position = Vector2(694, 884)
+texture = ExtResource("5_cxhow")
 
-[node name="ScreenTemplate" type="Sprite2D" parent="."]
-position = Vector2(425, 512)
-texture = ExtResource("2_q468q")
+[node name="SwingTree" type="Sprite2D" parent="."]
+position = Vector2(661, 628)
+texture = ExtResource("6_q1o8e")
 
-[node name="TileMap" type="TileMap" parent="."]
-position = Vector2(227, 261)
-tile_set = SubResource("TileSet_14350")
-format = 2
-layer_0/tile_data = PackedInt32Array(-327685, 0, 0, -262149, 0, 1, -196613, 0, 2, -131077, 0, 3, -65541, 0, 4, -5, 0, 5, 65531, 0, 6, -327684, 65536, 0, -262148, 65536, 1, -196612, 65536, 2, -131076, 65536, 3, -65540, 65536, 4, -4, 65536, 5, 65532, 65536, 6, -327683, 131072, 0, -262147, 131072, 1, -196611, 131072, 2, -131075, 131072, 3, -65539, 131072, 4, -3, 131072, 5, 65533, 131072, 6, -327682, 196608, 0, -262146, 196608, 1, -196610, 196608, 2, -131074, 196608, 3, -65538, 196608, 4, -2, 196608, 5, 65534, 196608, 6, -327681, 262144, 0, -262145, 262144, 1, -196609, 262144, 2, -131073, 262144, 3, -65537, 262144, 4, -1, 262144, 5, 65535, 262144, 6, -393216, 327680, 0, -327680, 327680, 1, -262144, 327680, 2, -196608, 327680, 3, -131072, 327680, 4, -65536, 327680, 5, 0, 327680, 6, -393215, 393216, 0, -327679, 393216, 1, -262143, 393216, 2, -196607, 393216, 3, -131071, 393216, 4, -65535, 393216, 5, 1, 393216, 6, -393203, 0, 0, -327667, 0, 1, -262131, 0, 2, -196595, 0, 3, -131059, 0, 4, -65523, 0, 5, 13, 0, 6, -393202, 65536, 0, -327666, 65536, 1, -262130, 65536, 2, -196594, 65536, 3, -131058, 65536, 4, -65522, 65536, 5, 14, 65536, 6, -393201, 131072, 0, -327665, 131072, 1, -262129, 131072, 2, -196593, 131072, 3, -131057, 131072, 4, -65521, 131072, 5, 15, 131072, 6, -393200, 196608, 0, -327664, 196608, 1, -262128, 196608, 2, -196592, 196608, 3, -131056, 196608, 4, -65520, 196608, 5, 16, 196608, 6, -393199, 262144, 0, -327663, 262144, 1, -262127, 262144, 2, -196591, 262144, 3, -131055, 262144, 4, -65519, 262144, 5, 17, 262144, 6, -393198, 327680, 0, -327662, 327680, 1, -262126, 327680, 2, -196590, 327680, 3, -131054, 327680, 4, -65518, 327680, 5, 18, 327680, 6, -393197, 393216, 0, -327661, 393216, 1, -262125, 393216, 2, -196589, 393216, 3, -131053, 393216, 4, -65517, 393216, 5, 19, 393216, 6)
+[node name="Streetlight" type="Sprite2D" parent="."]
+position = Vector2(429, 711)
+texture = ExtResource("7_qcjwi")
