@@ -11,7 +11,7 @@ func _ready() -> void:
 
 func enter_state() -> void:
 	set_physics_process(true)
-	player.animator.play('move')
+	player.animator.play('move_right')
 	
 func exit_state() -> void:
 	set_physics_process(false)

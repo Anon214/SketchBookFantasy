@@ -6,9 +6,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8q4y5"]
 size = Vector2(51, 51)
 
-[node name="Box" type="RigidBody2D"]
+[node name="Box" type="StaticBody2D"]
 collision_layer = 2
-gravity_scale = 0.0
 script = ExtResource("1_c0p2x")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

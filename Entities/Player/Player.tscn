@@ -8,7 +8,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4omx8"]
 radius = 13.0
-height = 54.0
+height = 40.0
 
 [sub_resource type="Animation" id="Animation_i5cj6"]
 length = 0.001
@@ -36,6 +36,18 @@ tracks/1/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_3q5kj"]
 resource_name = "idle"
@@ -54,7 +66,7 @@ tracks/0/keys = {
 }
 tracks/1/type = "value"
 tracks/1/imported = false
-tracks/1/enabled = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("Sprite2D:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
@@ -62,13 +74,14 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
+"values": [0.0872665]
 }
 
 [sub_resource type="Animation" id="Animation_8mxn5"]
-resource_name = "move"
-length = 1.6
+resource_name = "move_right"
+length = 0.28
 loop_mode = 1
+step = 0.09
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -76,17 +89,29 @@ tracks/0/path = NodePath("Sprite2D:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.09, 0.18, 0.27),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [0.0, 0.174533, 0.349066, 0.174533, 0.0, -0.174533, -0.349066, -0.174533, 0.0]
+"values": [0.314159, 0.0872665, -0.139626, 0.0872665]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6hnwc"]
 _data = {
 "RESET": SubResource("Animation_i5cj6"),
 "idle": SubResource("Animation_3q5kj"),
-"move": SubResource("Animation_8mxn5")
+"move_right": SubResource("Animation_8mxn5")
 }
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
@@ -96,10 +121,11 @@ motion_mode = 1
 script = ExtResource("1_omkyu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, 0)
 texture = ExtResource("1_v571l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 19)
+position = Vector2(0, 29)
 shape = SubResource("CapsuleShape2D_4omx8")
 
 [node name="FiniteStateMachine" parent="." node_paths=PackedStringArray("state") instance=ExtResource("2_gykkr")]
