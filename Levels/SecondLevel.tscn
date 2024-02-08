@@ -1,146 +1,147 @@
-[gd_scene load_steps=7 format=3 uid="uid://dv0be8iisglag"]
+[gd_scene load_steps=10 format=3 uid="uid://dv0be8iisglag"]
 
-[ext_resource type="Texture2D" uid="uid://b8ng2h2pyioek" path="res://Assets/game assets/second screen.png" id="1_18awa"]
-[ext_resource type="Texture2D" uid="uid://bdijnxh8wvwlk" path="res://Assets/game assets/box.png" id="2_hovki"]
-[ext_resource type="Texture2D" uid="uid://bj7fpv7wo4wvx" path="res://Assets/game assets/pebblesHor1.png" id="3_vb0y3"]
-[ext_resource type="Texture2D" uid="uid://r6m4d3y8oxaa" path="res://Assets/game assets/pebblesHor2.png" id="4_oxldb"]
-[ext_resource type="Texture2D" uid="uid://bp550e43dfe2v" path="res://Assets/game assets/pebblesVert1.png" id="5_k0jhv"]
-[ext_resource type="Texture2D" uid="uid://dmroliltch4w3" path="res://Assets/game assets/pebblesVert2.png" id="6_tx28d"]
+[ext_resource type="Texture2D" uid="uid://b8ng2h2pyioek" path="res://Assets/PNG/second screen.png" id="1_18awa"]
+[ext_resource type="Texture2D" uid="uid://bj7fpv7wo4wvx" path="res://Assets/PNG/pebblesHor1.png" id="3_vb0y3"]
+[ext_resource type="Texture2D" uid="uid://r6m4d3y8oxaa" path="res://Assets/PNG/pebblesHor2.png" id="4_oxldb"]
+[ext_resource type="Texture2D" uid="uid://bp550e43dfe2v" path="res://Assets/PNG/pebblesVert1.png" id="5_k0jhv"]
+[ext_resource type="PackedScene" uid="uid://b5fhwe38jqo1g" path="res://Assets/Objects/Box.tscn" id="6_l6ogr"]
+[ext_resource type="Texture2D" uid="uid://dmroliltch4w3" path="res://Assets/PNG/pebblesVert2.png" id="6_tx28d"]
+[ext_resource type="PackedScene" uid="uid://b6g7y4jencox4" path="res://Entities/Player/Player.tscn" id="7_34qke"]
+[ext_resource type="Script" path="res://Scripts/LevelScripts/BotExit.gd" id="8_drtck"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nky1i"]
+size = Vector2(123, 3)
 
 [node name="SecondScreen" type="Sprite2D"]
-position = Vector2(383, 532)
+position = Vector2(400, 518)
 texture = ExtResource("1_18awa")
 
-[node name="Box" type="Sprite2D" parent="."]
-position = Vector2(-112, 192.25)
-scale = Vector2(0.76, 0.756039)
-texture = ExtResource("2_hovki")
+[node name="Props" type="Node2D" parent="."]
 
-[node name="Box5" type="Sprite2D" parent="."]
-position = Vector2(83, 190.25)
-scale = Vector2(0.76, 0.756039)
-texture = ExtResource("2_hovki")
-
-[node name="Box6" type="Sprite2D" parent="."]
-position = Vector2(134, 190.25)
-scale = Vector2(0.76, 0.756039)
-texture = ExtResource("2_hovki")
-
-[node name="Box12" type="Sprite2D" parent="."]
-position = Vector2(133, 244)
-scale = Vector2(0.76, 0.756039)
-texture = ExtResource("2_hovki")
-
-[node name="Box15" type="Sprite2D" parent="."]
-position = Vector2(-12, 292.5)
-scale = Vector2(0.76, 0.756039)
-texture = ExtResource("2_hovki")
-
-[node name="Box16" type="Sprite2D" parent="."]
-position = Vector2(38, 292.5)
-scale = Vector2(0.76, 0.756039)
-texture = ExtResource("2_hovki")
-
-[node name="Box19" type="Sprite2D" parent="."]
-position = Vector2(-106, 344)
-scale = Vector2(0.76, 0.756039)
-texture = ExtResource("2_hovki")
-
-[node name="Box22" type="Sprite2D" parent="."]
-position = Vector2(37, 343.75)
-scale = Vector2(0.76, 0.756039)
-texture = ExtResource("2_hovki")
-
-[node name="Box23" type="Sprite2D" parent="."]
-position = Vector2(87, 343.75)
-scale = Vector2(0.76, 0.756039)
-texture = ExtResource("2_hovki")
-
-[node name="Box32" type="Sprite2D" parent="."]
-position = Vector2(-45, 443)
-scale = Vector2(0.76, 0.756039)
-texture = ExtResource("2_hovki")
-
-[node name="PebblesHor1" type="Sprite2D" parent="."]
+[node name="PebblesHor1" type="Sprite2D" parent="Props"]
 position = Vector2(-37, 359.5)
 texture = ExtResource("3_vb0y3")
 
-[node name="PebblesHor2" type="Sprite2D" parent="."]
+[node name="PebblesHor2" type="Sprite2D" parent="Props"]
 position = Vector2(3, 406.5)
 texture = ExtResource("4_oxldb")
 
-[node name="PebblesHor3" type="Sprite2D" parent="."]
+[node name="PebblesHor3" type="Sprite2D" parent="Props"]
 position = Vector2(163, 205.5)
 texture = ExtResource("4_oxldb")
 
-[node name="PebblesHor4" type="Sprite2D" parent="."]
+[node name="PebblesHor4" type="Sprite2D" parent="Props"]
 position = Vector2(-36, 257.5)
 texture = ExtResource("3_vb0y3")
 
-[node name="PebblesVert1" type="Sprite2D" parent="."]
+[node name="PebblesVert1" type="Sprite2D" parent="Props"]
 position = Vector2(-64, 394.5)
 texture = ExtResource("5_k0jhv")
 
-[node name="PebblesHor5" type="Sprite2D" parent="."]
+[node name="PebblesHor5" type="Sprite2D" parent="Props"]
 position = Vector2(-57, 455.5)
 texture = ExtResource("4_oxldb")
 
-[node name="PebblesHor6" type="Sprite2D" parent="."]
+[node name="PebblesHor6" type="Sprite2D" parent="Props"]
 position = Vector2(24, 409.5)
 texture = ExtResource("3_vb0y3")
 
-[node name="PebblesHor7" type="Sprite2D" parent="."]
+[node name="PebblesHor7" type="Sprite2D" parent="Props"]
 position = Vector2(84, 412.5)
 texture = ExtResource("3_vb0y3")
 
-[node name="PebblesHor8" type="Sprite2D" parent="."]
+[node name="PebblesHor8" type="Sprite2D" parent="Props"]
 position = Vector2(131, 458.5)
 texture = ExtResource("4_oxldb")
 
-[node name="PebblesHor9" type="Sprite2D" parent="."]
+[node name="PebblesHor9" type="Sprite2D" parent="Props"]
 position = Vector2(218, 411.5)
 texture = ExtResource("3_vb0y3")
 
-[node name="PebblesHor10" type="Sprite2D" parent="."]
+[node name="PebblesHor10" type="Sprite2D" parent="Props"]
 position = Vector2(-41, 101.5)
 texture = ExtResource("3_vb0y3")
 
-[node name="PebblesHor11" type="Sprite2D" parent="."]
+[node name="PebblesHor11" type="Sprite2D" parent="Props"]
 position = Vector2(0, 152.5)
 texture = ExtResource("4_oxldb")
 
-[node name="PebblesHor12" type="Sprite2D" parent="."]
+[node name="PebblesHor12" type="Sprite2D" parent="Props"]
 position = Vector2(60, 152.5)
 texture = ExtResource("4_oxldb")
 
-[node name="PebblesHor13" type="Sprite2D" parent="."]
+[node name="PebblesHor13" type="Sprite2D" parent="Props"]
 position = Vector2(145, 104.5)
 texture = ExtResource("3_vb0y3")
 
-[node name="PebblesHor14" type="Sprite2D" parent="."]
+[node name="PebblesHor14" type="Sprite2D" parent="Props"]
 position = Vector2(202, 105.5)
 texture = ExtResource("3_vb0y3")
 
-[node name="PebblesVert2" type="Sprite2D" parent="."]
+[node name="PebblesVert2" type="Sprite2D" parent="Props"]
 position = Vector2(-126, 252)
 texture = ExtResource("5_k0jhv")
 
-[node name="PebblesVert3" type="Sprite2D" parent="."]
+[node name="PebblesVert3" type="Sprite2D" parent="Props"]
 position = Vector2(-125, 306)
 texture = ExtResource("5_k0jhv")
 
-[node name="PebblesVert4" type="Sprite2D" parent="."]
+[node name="PebblesVert4" type="Sprite2D" parent="Props"]
 position = Vector2(-198, 402)
 texture = ExtResource("6_tx28d")
 
-[node name="PebblesVert5" type="Sprite2D" parent="."]
+[node name="PebblesVert5" type="Sprite2D" parent="Props"]
 position = Vector2(-125, 401)
 texture = ExtResource("5_k0jhv")
 
-[node name="PebblesVert6" type="Sprite2D" parent="."]
+[node name="PebblesVert6" type="Sprite2D" parent="Props"]
 position = Vector2(-124, 448)
 texture = ExtResource("5_k0jhv")
 
-[node name="PebblesVert7" type="Sprite2D" parent="."]
+[node name="PebblesVert7" type="Sprite2D" parent="Props"]
 position = Vector2(-196, 549)
 texture = ExtResource("6_tx28d")
+
+[node name="Box" parent="Props" instance=ExtResource("6_l6ogr")]
+position = Vector2(-228, 387)
+
+[node name="Box2" parent="Props" instance=ExtResource("6_l6ogr")]
+position = Vector2(-98, 286)
+
+[node name="Box3" parent="Props" instance=ExtResource("6_l6ogr")]
+position = Vector2(-143, 286)
+
+[node name="Box4" parent="Props" instance=ExtResource("6_l6ogr")]
+position = Vector2(-290, 287)
+
+[node name="Box5" parent="Props" instance=ExtResource("6_l6ogr")]
+position = Vector2(-144, 236)
+
+[node name="Box6" parent="Props" instance=ExtResource("6_l6ogr")]
+position = Vector2(-196, 236)
+
+[node name="Box7" parent="Props" instance=ExtResource("6_l6ogr")]
+position = Vector2(-47, 187)
+
+[node name="Box8" parent="Props" instance=ExtResource("6_l6ogr")]
+position = Vector2(-48, 135)
+
+[node name="Box9" parent="Props" instance=ExtResource("6_l6ogr")]
+position = Vector2(-98, 135)
+
+[node name="Box10" parent="Props" instance=ExtResource("6_l6ogr")]
+position = Vector2(-292, 138)
+
+[node name="Player" parent="." instance=ExtResource("7_34qke")]
+position = Vector2(49, 464)
+
+[node name="BotExit" type="Area2D" parent="."]
+script = ExtResource("8_drtck")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BotExit"]
+position = Vector2(49.5, 516.5)
+shape = SubResource("RectangleShape2D_nky1i")
+
+[connection signal="body_entered" from="BotExit" to="BotExit" method="_on_body_entered"]
+
+[editable path="Props/Box"]

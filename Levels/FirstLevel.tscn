@@ -1,39 +1,30 @@
-[gd_scene load_steps=8 format=3 uid="uid://0njc62m63640"]
+[gd_scene load_steps=5 format=3 uid="uid://0njc62m63640"]
 
-[ext_resource type="Texture2D" uid="uid://cat7wymif32y8" path="res://Assets/game assets/first_screen_v2.png" id="1_pvi7s"]
-[ext_resource type="Texture2D" uid="uid://cf4oyg7ka2moy" path="res://Assets/game assets/house2.png" id="3_tab2u"]
-[ext_resource type="Texture2D" uid="uid://b55nav0xvdfpw" path="res://Assets/game assets/house1.png" id="3_we62m"]
-[ext_resource type="Texture2D" uid="uid://cr8rowxfu2uqv" path="res://Assets/game assets/house 3.png" id="4_lrenh"]
-[ext_resource type="Texture2D" uid="uid://ccn3hf7yxpkyn" path="res://Assets/game assets/tire.png" id="5_cxhow"]
-[ext_resource type="Texture2D" uid="uid://dup0uirbrqn8i" path="res://Assets/game assets/swing tree.png" id="6_q1o8e"]
-[ext_resource type="Texture2D" uid="uid://nnjkdb7mfw2u" path="res://Assets/game assets/streetlight.png" id="7_qcjwi"]
+[ext_resource type="Texture2D" uid="uid://cat7wymif32y8" path="res://Assets/PNG/first_screen_v2.png" id="1_pvi7s"]
+[ext_resource type="PackedScene" uid="uid://b6g7y4jencox4" path="res://Entities/Player/Player.tscn" id="8_kyyyb"]
+[ext_resource type="Script" path="res://Scripts/LevelScripts/TopExit.gd" id="9_b0qby"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wlw8i"]
+size = Vector2(117, 34)
 
 [node name="Firstscreen" type="Node2D"]
+y_sort_enabled = true
+position = Vector2(-11, -8)
 
-[node name="FirstScreenV2" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(411, 526)
 texture = ExtResource("1_pvi7s")
 
-[node name="House1" type="Sprite2D" parent="."]
-position = Vector2(171, 307)
-texture = ExtResource("3_we62m")
+[node name="Player" parent="." instance=ExtResource("8_kyyyb")]
+z_index = 0
+position = Vector2(469, 461)
 
-[node name="House2" type="Sprite2D" parent="."]
-position = Vector2(689, 297)
-texture = ExtResource("3_tab2u")
+[node name="TopExit" type="Area2D" parent="."]
+script = ExtResource("9_b0qby")
 
-[node name="House3" type="Sprite2D" parent="."]
-position = Vector2(191, 766)
-texture = ExtResource("4_lrenh")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TopExit"]
+position = Vector2(472.5, 25)
+shape = SubResource("RectangleShape2D_wlw8i")
 
-[node name="Tire" type="Sprite2D" parent="."]
-position = Vector2(694, 884)
-texture = ExtResource("5_cxhow")
-
-[node name="SwingTree" type="Sprite2D" parent="."]
-position = Vector2(661, 628)
-texture = ExtResource("6_q1o8e")
-
-[node name="Streetlight" type="Sprite2D" parent="."]
-position = Vector2(429, 711)
-texture = ExtResource("7_qcjwi")
+[connection signal="body_entered" from="TopExit" to="TopExit" method="_on_body_entered"]

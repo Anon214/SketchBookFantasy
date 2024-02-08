@@ -7,7 +7,7 @@ extends CharacterBody2D
 @onready var animator : AnimationPlayer = $AnimationPlayer
 @onready var sprite : Sprite2D = $Sprite2D
 var movement_direction = Vector2.ZERO
-var speed : float = 200
+var speed : float = 300
 
 func _ready():
 	move_state.idle_mode.connect(fsm.change_state.bind(idle_state))
