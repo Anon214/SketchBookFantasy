@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://dv0be8iisglag"]
+[gd_scene load_steps=12 format=3 uid="uid://dv0be8iisglag"]
 
 [ext_resource type="Texture2D" uid="uid://b8ng2h2pyioek" path="res://Assets/PNG/second screen.png" id="1_18awa"]
+[ext_resource type="Script" path="res://Scripts/Assets/GridContainer.gd" id="2_ylu76"]
 [ext_resource type="Texture2D" uid="uid://bj7fpv7wo4wvx" path="res://Assets/PNG/pebblesHor1.png" id="3_vb0y3"]
 [ext_resource type="Texture2D" uid="uid://r6m4d3y8oxaa" path="res://Assets/PNG/pebblesHor2.png" id="4_oxldb"]
 [ext_resource type="Texture2D" uid="uid://bp550e43dfe2v" path="res://Assets/PNG/pebblesVert1.png" id="5_k0jhv"]
@@ -9,128 +10,228 @@
 [ext_resource type="PackedScene" uid="uid://b6g7y4jencox4" path="res://Entities/Player/Player.tscn" id="7_34qke"]
 [ext_resource type="Script" path="res://Scripts/LevelScripts/BotExit.gd" id="8_drtck"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lci3l"]
+size = Vector2(38.875, 38.125)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nky1i"]
 size = Vector2(123, 3)
 
 [node name="SecondScreen" type="Sprite2D"]
-position = Vector2(400, 518)
+position = Vector2(405, 512)
 texture = ExtResource("1_18awa")
 
-[node name="Props" type="Node2D" parent="."]
+[node name="PuzzleArea" type="Node2D" parent="."]
 
-[node name="PebblesHor1" type="Sprite2D" parent="Props"]
+[node name="Pebbles" type="Node2D" parent="PuzzleArea"]
+
+[node name="PebblesHor1" type="Sprite2D" parent="PuzzleArea/Pebbles"]
 position = Vector2(-37, 359.5)
 texture = ExtResource("3_vb0y3")
 
-[node name="PebblesHor2" type="Sprite2D" parent="Props"]
+[node name="PebblesHor2" type="Sprite2D" parent="PuzzleArea/Pebbles"]
 position = Vector2(3, 406.5)
 texture = ExtResource("4_oxldb")
 
-[node name="PebblesHor3" type="Sprite2D" parent="Props"]
+[node name="PebblesHor3" type="Sprite2D" parent="PuzzleArea/Pebbles"]
 position = Vector2(163, 205.5)
 texture = ExtResource("4_oxldb")
 
-[node name="PebblesHor4" type="Sprite2D" parent="Props"]
+[node name="PebblesHor4" type="Sprite2D" parent="PuzzleArea/Pebbles"]
 position = Vector2(-36, 257.5)
 texture = ExtResource("3_vb0y3")
 
-[node name="PebblesVert1" type="Sprite2D" parent="Props"]
+[node name="PebblesVert1" type="Sprite2D" parent="PuzzleArea/Pebbles"]
 position = Vector2(-64, 394.5)
 texture = ExtResource("5_k0jhv")
 
-[node name="PebblesHor5" type="Sprite2D" parent="Props"]
+[node name="PebblesHor5" type="Sprite2D" parent="PuzzleArea/Pebbles"]
 position = Vector2(-57, 455.5)
 texture = ExtResource("4_oxldb")
 
-[node name="PebblesHor6" type="Sprite2D" parent="Props"]
+[node name="PebblesHor6" type="Sprite2D" parent="PuzzleArea/Pebbles"]
 position = Vector2(24, 409.5)
 texture = ExtResource("3_vb0y3")
 
-[node name="PebblesHor7" type="Sprite2D" parent="Props"]
+[node name="PebblesHor7" type="Sprite2D" parent="PuzzleArea/Pebbles"]
 position = Vector2(84, 412.5)
 texture = ExtResource("3_vb0y3")
 
-[node name="PebblesHor8" type="Sprite2D" parent="Props"]
-position = Vector2(131, 458.5)
+[node name="PebblesHor8" type="Sprite2D" parent="PuzzleArea/Pebbles"]
+position = Vector2(124, 459)
 texture = ExtResource("4_oxldb")
 
-[node name="PebblesHor9" type="Sprite2D" parent="Props"]
-position = Vector2(218, 411.5)
+[node name="PebblesHor9" type="Sprite2D" parent="PuzzleArea/Pebbles"]
+position = Vector2(203, 411)
 texture = ExtResource("3_vb0y3")
 
-[node name="PebblesHor10" type="Sprite2D" parent="Props"]
+[node name="PebblesHor10" type="Sprite2D" parent="PuzzleArea/Pebbles"]
 position = Vector2(-41, 101.5)
 texture = ExtResource("3_vb0y3")
 
-[node name="PebblesHor11" type="Sprite2D" parent="Props"]
+[node name="PebblesHor11" type="Sprite2D" parent="PuzzleArea/Pebbles"]
 position = Vector2(0, 152.5)
 texture = ExtResource("4_oxldb")
 
-[node name="PebblesHor12" type="Sprite2D" parent="Props"]
+[node name="PebblesHor12" type="Sprite2D" parent="PuzzleArea/Pebbles"]
 position = Vector2(60, 152.5)
 texture = ExtResource("4_oxldb")
 
-[node name="PebblesHor13" type="Sprite2D" parent="Props"]
+[node name="PebblesHor13" type="Sprite2D" parent="PuzzleArea/Pebbles"]
 position = Vector2(145, 104.5)
 texture = ExtResource("3_vb0y3")
 
-[node name="PebblesHor14" type="Sprite2D" parent="Props"]
+[node name="PebblesHor14" type="Sprite2D" parent="PuzzleArea/Pebbles"]
 position = Vector2(202, 105.5)
 texture = ExtResource("3_vb0y3")
 
-[node name="PebblesVert2" type="Sprite2D" parent="Props"]
+[node name="PebblesVert2" type="Sprite2D" parent="PuzzleArea/Pebbles"]
 position = Vector2(-126, 252)
 texture = ExtResource("5_k0jhv")
 
-[node name="PebblesVert3" type="Sprite2D" parent="Props"]
+[node name="PebblesVert3" type="Sprite2D" parent="PuzzleArea/Pebbles"]
 position = Vector2(-125, 306)
 texture = ExtResource("5_k0jhv")
 
-[node name="PebblesVert4" type="Sprite2D" parent="Props"]
+[node name="PebblesVert4" type="Sprite2D" parent="PuzzleArea/Pebbles"]
 position = Vector2(-198, 402)
 texture = ExtResource("6_tx28d")
 
-[node name="PebblesVert5" type="Sprite2D" parent="Props"]
+[node name="PebblesVert5" type="Sprite2D" parent="PuzzleArea/Pebbles"]
 position = Vector2(-125, 401)
 texture = ExtResource("5_k0jhv")
 
-[node name="PebblesVert6" type="Sprite2D" parent="Props"]
+[node name="PebblesVert6" type="Sprite2D" parent="PuzzleArea/Pebbles"]
 position = Vector2(-124, 448)
 texture = ExtResource("5_k0jhv")
 
-[node name="PebblesVert7" type="Sprite2D" parent="Props"]
+[node name="PebblesVert7" type="Sprite2D" parent="PuzzleArea/Pebbles"]
 position = Vector2(-196, 549)
 texture = ExtResource("6_tx28d")
 
-[node name="Box" parent="Props" instance=ExtResource("6_l6ogr")]
-position = Vector2(-228, 387)
+[node name="GridContainer" type="Area2D" parent="PuzzleArea"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("2_ylu76")
 
-[node name="Box2" parent="Props" instance=ExtResource("6_l6ogr")]
-position = Vector2(-98, 286)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-266, 158)
+shape = SubResource("RectangleShape2D_lci3l")
 
-[node name="Box3" parent="Props" instance=ExtResource("6_l6ogr")]
-position = Vector2(-143, 286)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-210, 158)
+shape = SubResource("RectangleShape2D_lci3l")
 
-[node name="Box4" parent="Props" instance=ExtResource("6_l6ogr")]
-position = Vector2(-290, 287)
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-154, 158)
+shape = SubResource("RectangleShape2D_lci3l")
 
-[node name="Box5" parent="Props" instance=ExtResource("6_l6ogr")]
-position = Vector2(-144, 236)
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-99, 158)
+shape = SubResource("RectangleShape2D_lci3l")
 
-[node name="Box6" parent="Props" instance=ExtResource("6_l6ogr")]
-position = Vector2(-196, 236)
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-44, 158)
+shape = SubResource("RectangleShape2D_lci3l")
 
-[node name="Box7" parent="Props" instance=ExtResource("6_l6ogr")]
-position = Vector2(-47, 187)
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-267, 207)
+shape = SubResource("RectangleShape2D_lci3l")
 
-[node name="Box8" parent="Props" instance=ExtResource("6_l6ogr")]
-position = Vector2(-48, 135)
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-211, 207)
+shape = SubResource("RectangleShape2D_lci3l")
 
-[node name="Box9" parent="Props" instance=ExtResource("6_l6ogr")]
-position = Vector2(-98, 135)
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-155, 207)
+shape = SubResource("RectangleShape2D_lci3l")
 
-[node name="Box10" parent="Props" instance=ExtResource("6_l6ogr")]
-position = Vector2(-292, 138)
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-100, 207)
+shape = SubResource("RectangleShape2D_lci3l")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-45, 207)
+shape = SubResource("RectangleShape2D_lci3l")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-267, 257)
+shape = SubResource("RectangleShape2D_lci3l")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-210, 257)
+shape = SubResource("RectangleShape2D_lci3l")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-154, 257)
+shape = SubResource("RectangleShape2D_lci3l")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-100, 257)
+shape = SubResource("RectangleShape2D_lci3l")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-44, 257)
+shape = SubResource("RectangleShape2D_lci3l")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-267, 308)
+shape = SubResource("RectangleShape2D_lci3l")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-210, 308)
+shape = SubResource("RectangleShape2D_lci3l")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-153, 308)
+shape = SubResource("RectangleShape2D_lci3l")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-99, 308)
+shape = SubResource("RectangleShape2D_lci3l")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-44, 308)
+shape = SubResource("RectangleShape2D_lci3l")
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-267, 357)
+shape = SubResource("RectangleShape2D_lci3l")
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-209, 357)
+shape = SubResource("RectangleShape2D_lci3l")
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-152, 357)
+shape = SubResource("RectangleShape2D_lci3l")
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-99, 357)
+shape = SubResource("RectangleShape2D_lci3l")
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-43, 357)
+shape = SubResource("RectangleShape2D_lci3l")
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-266, 409)
+shape = SubResource("RectangleShape2D_lci3l")
+
+[node name="CollisionShape2D27" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-209, 409)
+shape = SubResource("RectangleShape2D_lci3l")
+
+[node name="CollisionShape2D28" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-152, 409)
+shape = SubResource("RectangleShape2D_lci3l")
+
+[node name="CollisionShape2D29" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-98, 409)
+shape = SubResource("RectangleShape2D_lci3l")
+
+[node name="CollisionShape2D30" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-42, 409)
+shape = SubResource("RectangleShape2D_lci3l")
 
 [node name="Player" parent="." instance=ExtResource("7_34qke")]
 position = Vector2(49, 464)
@@ -142,6 +243,8 @@ script = ExtResource("8_drtck")
 position = Vector2(49.5, 516.5)
 shape = SubResource("RectangleShape2D_nky1i")
 
-[connection signal="body_entered" from="BotExit" to="BotExit" method="_on_body_entered"]
+[node name="Box" parent="." instance=ExtResource("6_l6ogr")]
+position = Vector2(-303, 443)
 
-[editable path="Props/Box"]
+[connection signal="body_entered" from="PuzzleArea/GridContainer" to="PuzzleArea/GridContainer" method="_on_body_entered"]
+[connection signal="body_entered" from="BotExit" to="BotExit" method="_on_body_entered"]
