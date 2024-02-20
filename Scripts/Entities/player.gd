@@ -12,6 +12,7 @@ var speed : float = 300
 func _ready():
 	move_state.idle_mode.connect(fsm.change_state.bind(idle_state))
 	idle_state.move_mode.connect(fsm.change_state.bind(move_state))
+	
 
 func _physics_process(_delta):
 	player_input()

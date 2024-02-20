@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dv0be8iisglag"]
+[gd_scene load_steps=47 format=3 uid="uid://dv0be8iisglag"]
 
 [ext_resource type="Texture2D" uid="uid://b8ng2h2pyioek" path="res://Assets/PNG/second screen.png" id="1_18awa"]
 [ext_resource type="Script" path="res://Scripts/Assets/GridContainer.gd" id="2_ylu76"]
@@ -10,19 +10,128 @@
 [ext_resource type="PackedScene" uid="uid://b6g7y4jencox4" path="res://Entities/Player/Player.tscn" id="7_34qke"]
 [ext_resource type="Script" path="res://Scripts/LevelScripts/BotExit.gd" id="8_drtck"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lci3l"]
-size = Vector2(38.875, 38.125)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v45cc"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ugnu8"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gnanf"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ntic1"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ws6xl"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ygdhe"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wv0cj"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uevif"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_whr8r"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gidja"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7gs56"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trm3p"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0scdr"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6flbo"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7lv77"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8c2c5"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t3p4r"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7d8wp"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xwbx3"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trk4f"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_noyxu"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gytdu"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c30ke"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x61jr"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yrqm5"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cxcq5"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_svpup"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_44rqw"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cma6j"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2cpi"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j51ln"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x1rsx"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6uqaq"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ykjmw"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vm0ex"]
+size = Vector2(39.1838, 38.7901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tf4ou"]
+size = Vector2(39.1838, 38.7901)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nky1i"]
 size = Vector2(123, 3)
 
-[node name="SecondScreen" type="Sprite2D"]
-position = Vector2(405, 512)
+[node name="SecondScreen" type="Node2D"]
+position = Vector2(400, 517)
+
+[node name="Background" type="Sprite2D" parent="."]
 texture = ExtResource("1_18awa")
+metadata/_edit_group_ = true
 
 [node name="PuzzleArea" type="Node2D" parent="."]
 
 [node name="Pebbles" type="Node2D" parent="PuzzleArea"]
+visible = false
 
 [node name="PebblesHor1" type="Sprite2D" parent="PuzzleArea/Pebbles"]
 position = Vector2(-37, 359.5)
@@ -41,7 +150,7 @@ position = Vector2(-36, 257.5)
 texture = ExtResource("3_vb0y3")
 
 [node name="PebblesVert1" type="Sprite2D" parent="PuzzleArea/Pebbles"]
-position = Vector2(-64, 394.5)
+position = Vector2(-70, 395)
 texture = ExtResource("5_k0jhv")
 
 [node name="PebblesHor5" type="Sprite2D" parent="PuzzleArea/Pebbles"]
@@ -109,129 +218,196 @@ position = Vector2(-196, 549)
 texture = ExtResource("6_tx28d")
 
 [node name="GridContainer" type="Area2D" parent="PuzzleArea"]
+unique_name_in_owner = true
+position = Vector2(-36, 3)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("2_ylu76")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-266, 158)
-shape = SubResource("RectangleShape2D_lci3l")
+[node name="CollisionShape2D1" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-279, 155)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_v45cc")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-210, 158)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-225, 155)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_ugnu8")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-154, 158)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-169, 155)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_gnanf")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-99, 158)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-113, 155)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_ntic1")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-44, 158)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-58, 155)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_ws6xl")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-267, 207)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-3, 155)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_ygdhe")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-211, 207)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-279, 204)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_wv0cj")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-155, 207)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-224, 204)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_uevif")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-100, 207)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-168, 204)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_whr8r")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-45, 207)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-112, 204)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_gidja")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-267, 257)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-57, 204)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_7gs56")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-210, 257)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-2, 204)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_trm3p")
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-154, 257)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-279, 255)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_0scdr")
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-100, 257)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-224, 255)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_6flbo")
 
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-44, 257)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-168, 255)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_7lv77")
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-267, 308)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-112, 255)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_8c2c5")
 
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-210, 308)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-57, 255)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_t3p4r")
 
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-153, 308)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-2, 255)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_7d8wp")
 
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-99, 308)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-279, 304)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_xwbx3")
 
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-44, 308)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-224, 304)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_trk4f")
 
 [node name="CollisionShape2D21" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-267, 357)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-168, 304)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_noyxu")
 
 [node name="CollisionShape2D22" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-209, 357)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-112, 304)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_gytdu")
 
 [node name="CollisionShape2D23" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-152, 357)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-57, 304)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_c30ke")
 
 [node name="CollisionShape2D24" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-99, 357)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-2, 304)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_x61jr")
 
 [node name="CollisionShape2D25" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-43, 357)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-279, 355)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_yrqm5")
 
 [node name="CollisionShape2D26" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-266, 409)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-224, 355)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_cxcq5")
 
 [node name="CollisionShape2D27" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-209, 409)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-168, 355)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_svpup")
 
 [node name="CollisionShape2D28" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-152, 409)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-112, 355)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_44rqw")
 
 [node name="CollisionShape2D29" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-98, 409)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-57, 355)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_cma6j")
 
 [node name="CollisionShape2D30" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
-position = Vector2(-42, 409)
-shape = SubResource("RectangleShape2D_lci3l")
+position = Vector2(-2, 355)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d2cpi")
+
+[node name="CollisionShape2D31" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-279, 405)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_j51ln")
+
+[node name="CollisionShape2D32" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-224, 405)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_x1rsx")
+
+[node name="CollisionShape2D33" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-168, 405)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_6uqaq")
+
+[node name="CollisionShape2D34" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-112, 405)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_ykjmw")
+
+[node name="CollisionShape2D35" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-57, 405)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_vm0ex")
+
+[node name="CollisionShape2D36" type="CollisionShape2D" parent="PuzzleArea/GridContainer"]
+position = Vector2(-2, 405)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_tf4ou")
+
+[node name="BoxContainer" type="Node2D" parent="PuzzleArea"]
+
+[node name="Box" parent="PuzzleArea/BoxContainer" instance=ExtResource("6_l6ogr")]
+position = Vector2(-168, 402)
 
 [node name="Player" parent="." instance=ExtResource("7_34qke")]
 position = Vector2(49, 464)
@@ -243,8 +419,4 @@ script = ExtResource("8_drtck")
 position = Vector2(49.5, 516.5)
 shape = SubResource("RectangleShape2D_nky1i")
 
-[node name="Box" parent="." instance=ExtResource("6_l6ogr")]
-position = Vector2(-303, 443)
-
-[connection signal="body_entered" from="PuzzleArea/GridContainer" to="PuzzleArea/GridContainer" method="_on_body_entered"]
 [connection signal="body_entered" from="BotExit" to="BotExit" method="_on_body_entered"]

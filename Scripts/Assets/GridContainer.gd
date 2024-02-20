@@ -1,19 +1,37 @@
+class_name GContainer
 extends Area2D
 
-var matrix = [0, 0]
 @onready var children = get_children()
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	matrix[0] = children[0]
-	matrix[1] = children[1]
+@onready var collision_matrix = create_empty_collision_matrix()
+@onready var box_matrix = create_empty_box_matrix()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
-func _on_body_entered(body):
-	body.position = matrix[0].position
-	body.position.x -= 22
-	body.position.y -= 21
+func create_empty_collision_matrix():
+	var matrix = []
+	var c = 0
+	for i in range(6):
+		var array = [0, 0, 0, 0, 0, 0]
+		for j in range(6):
+			array[j] = children[c]
+			c += 1
+		matrix.append(array)
+	
+	return matrix
+		
+func create_empty_box_matrix():
+	var matrix = []
+	for i in range(6):
+		var array = [0, 0, 0, 0, 0, 0]
+		matrix.append(array)
+	return matrix
+		
+func set_boxes(box: Box):
+	var r = box.r
+	var c = box.c
+	box_matrix[r][c] = box
+	print(r, c)
+	
+	var pos = collision_matrix[r][c].position
+	pos.x -= 56
+	pos.y -= 16
+	
+	box.position = pos
