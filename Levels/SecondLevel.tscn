@@ -126,23 +126,22 @@ position = Vector2(400, 517)
 
 [node name="Background" type="Sprite2D" parent="."]
 texture = ExtResource("1_18awa")
-metadata/_edit_group_ = true
 
 [node name="PuzzleArea" type="Node2D" parent="."]
 
 [node name="Pebbles" type="Node2D" parent="PuzzleArea"]
-visible = false
+position = Vector2(-44, 0)
 
 [node name="PebblesHor1" type="Sprite2D" parent="PuzzleArea/Pebbles"]
 position = Vector2(-37, 359.5)
 texture = ExtResource("3_vb0y3")
 
 [node name="PebblesHor2" type="Sprite2D" parent="PuzzleArea/Pebbles"]
-position = Vector2(3, 406.5)
+position = Vector2(-5, 406)
 texture = ExtResource("4_oxldb")
 
 [node name="PebblesHor3" type="Sprite2D" parent="PuzzleArea/Pebbles"]
-position = Vector2(163, 205.5)
+position = Vector2(170, 204)
 texture = ExtResource("4_oxldb")
 
 [node name="PebblesHor4" type="Sprite2D" parent="PuzzleArea/Pebbles"]
@@ -407,7 +406,7 @@ shape = SubResource("RectangleShape2D_tf4ou")
 [node name="BoxContainer" type="Node2D" parent="PuzzleArea"]
 
 [node name="Box" parent="PuzzleArea/BoxContainer" instance=ExtResource("6_l6ogr")]
-position = Vector2(-168, 402)
+position = Vector2(-169, 238)
 
 [node name="Player" parent="." instance=ExtResource("7_34qke")]
 position = Vector2(49, 464)
@@ -418,5 +417,40 @@ script = ExtResource("8_drtck")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BotExit"]
 position = Vector2(49.5, 516.5)
 shape = SubResource("RectangleShape2D_nky1i")
+
+[node name="PebblesHor1" type="Sprite2D" parent="."]
+position = Vector2(200, 413)
+texture = ExtResource("3_vb0y3")
+
+[node name="PebblesHor2" type="Sprite2D" parent="."]
+position = Vector2(206, 104)
+texture = ExtResource("3_vb0y3")
+
+[node name="Box" parent="." instance=ExtResource("6_l6ogr")]
+position = Vector2(-335, 287)
+
+[node name="Box2" parent="." instance=ExtResource("6_l6ogr")]
+position = Vector2(-281, 388)
+
+[node name="Box3" parent="." instance=ExtResource("6_l6ogr")]
+position = Vector2(-114, 288)
+
+[node name="Box4" parent="." instance=ExtResource("6_l6ogr")]
+position = Vector2(-169, 287)
+
+[node name="Box5" parent="." instance=ExtResource("6_l6ogr")]
+position = Vector2(-115, 138)
+
+[node name="Box6" parent="." instance=ExtResource("6_l6ogr")]
+position = Vector2(-63, 136)
+
+[node name="Box7" parent="." instance=ExtResource("6_l6ogr")]
+position = Vector2(-60, 187)
+
+[node name="Box8" parent="." instance=ExtResource("6_l6ogr")]
+position = Vector2(-224, 240)
+
+[node name="Box9" parent="." instance=ExtResource("6_l6ogr")]
+position = Vector2(-338, 140)
 
 [connection signal="body_entered" from="BotExit" to="BotExit" method="_on_body_entered"]

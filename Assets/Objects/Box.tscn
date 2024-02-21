@@ -1,10 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5fhwe38jqo1g"]
+[gd_scene load_steps=9 format=3 uid="uid://b5fhwe38jqo1g"]
 
 [ext_resource type="Script" path="res://Scripts/Assets/Box.gd" id="1_c0p2x"]
 [ext_resource type="Texture2D" uid="uid://bdijnxh8wvwlk" path="res://Assets/PNG/box.png" id="1_t6xbr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wf2m8"]
 size = Vector2(39.3194, 39.875)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dtelt"]
+size = Vector2(3.88889, 33.3333)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f6lcq"]
+size = Vector2(3.33333, 33.3333)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wr7h6"]
+size = Vector2(32.2222, 3.33333)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y5dnk"]
+size = Vector2(32.2222, 3.33334)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nv41o"]
+size = Vector2(37.7778, 37.7778)
 
 [node name="Box" type="Area2D" groups=["Box"]]
 position = Vector2(-3, -2)
@@ -22,4 +37,43 @@ texture = ExtResource("1_t6xbr")
 position = Vector2(23.6736, 22.2847)
 shape = SubResource("RectangleShape2D_wf2m8")
 
+[node name="Left" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left"]
+position = Vector2(5.83333, 22.2222)
+shape = SubResource("RectangleShape2D_dtelt")
+
+[node name="Right" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right"]
+position = Vector2(41.6667, 22.2222)
+shape = SubResource("RectangleShape2D_f6lcq")
+
+[node name="Top" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Top"]
+position = Vector2(23.8889, 3.88889)
+shape = SubResource("RectangleShape2D_wr7h6")
+
+[node name="Bot" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bot"]
+position = Vector2(23.8889, 40.5556)
+shape = SubResource("RectangleShape2D_y5dnk")
+
+[node name="Hard" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hard"]
+position = Vector2(23.3333, 22.2222)
+shape = SubResource("RectangleShape2D_nv41o")
+
 [connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]
+[connection signal="body_entered" from="Left" to="." method="_on_left_body_entered"]
+[connection signal="body_entered" from="Right" to="." method="_on_right_body_entered"]
+[connection signal="body_entered" from="Top" to="." method="_on_top_body_entered"]
+[connection signal="body_entered" from="Bot" to="." method="_on_bot_body_entered"]
