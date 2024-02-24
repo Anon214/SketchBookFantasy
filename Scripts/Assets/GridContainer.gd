@@ -56,7 +56,22 @@ func moved_outside_ans(r, c):
 		total -= 1
 
 func set_box_left(r, c): #0,1
+	if invalid(r, c - 1):
+		return
+	if r == 3 and c == 1:
+		return
+		
+	moved_outside_ans(r, c)
+	
+	var box = box_matrix[r][c]
+	box_matrix[r][c] = 0
+	box.c = box.c - 1
+	set_box(box)
+	
+func set_box_right(r, c):
 	if invalid(r, c + 1):
+		return
+	if r == 3 and c == 0:
 		return
 		
 	moved_outside_ans(r, c)
@@ -66,35 +81,29 @@ func set_box_left(r, c): #0,1
 	box.c = box.c + 1
 	set_box(box)
 	
-func set_box_right(r, c):
-	if invalid(r, c - 1):
+func set_box_top(r, c):
+	if invalid(r - 1, c):
+		return
+	if (r == 3 and c == 0) or (r == 5 and c == 0) or (r == 5 and c == 1) or (r == 1 and c == 4):
 		return
 	
 	moved_outside_ans(r, c)
 	
 	var box = box_matrix[r][c]
 	box_matrix[r][c] = 0
-	box.c = box.c - 1
+	box.r = box.r - 1
 	set_box(box)
 	
-func set_box_top(r, c):
+func set_box_down(r, c):
 	if invalid(r + 1, c):
 		return
+	if (r == 2 and c == 0) or (r == 4 and c == 0) or (r == 4 and c == 1) or (r == 0 and c == 4):
+		return
+	
 		
 	moved_outside_ans(r, c)
 	
 	var box = box_matrix[r][c]
 	box_matrix[r][c] = 0
 	box.r = box.r + 1
-	set_box(box)
-	
-func set_box_down(r, c):
-	if invalid(r - 1, c):
-		return
-		
-	moved_outside_ans(r, c)
-	
-	var box = box_matrix[r][c]
-	box_matrix[r][c] = 0
-	box.r = box.r - 1
 	set_box(box)

@@ -20,13 +20,13 @@ func calculate_matrix():
 	c = area_index % 6
 
 func _on_left_body_entered(body):
-	grid_container.set_box_left(r, c)
-
-func _on_right_body_entered(body):
 	grid_container.set_box_right(r, c)
 
+func _on_right_body_entered(body):
+	grid_container.set_box_left(r, c)
+
 func _on_top_body_entered(body):
-	grid_container.set_box_top(r, c)
+	grid_container.set_box_down(r, c)
 
 func _on_bot_body_entered(body):
-	grid_container.set_box_down(r, c)
+	grid_container.set_box_top(r, c)
